@@ -2908,6 +2908,193 @@ body .tippy-box .tippy-arrow {
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.info-form-box {
+  margin-bottom: 20px;
+  position: relative;
+  padding-top: 30px;
+}
+.info-form-box .info-inner-wrap {
+  margin-bottom: 27px;
+}
+.info-form-box .box-form-wrap {
+  border-radius: var(--radiusLarge);
+  border: 1px solid var(--clr-att-second);
+  padding: 14px 8px 22px 8px;
+  margin: 0 -8px;
+}
+.info-form-box .box-inner-wrap {
+  display: block;
+}
+.info-form-box .box-info-wrap {
+  margin-bottom: 20px;
+}
+.info-form-box .desc-section-wrap {
+  margin-bottom: 20px;
+}
+.info-form-box .desc-section-wrap:first-child .h2-title {
+  max-width: 240px;
+}
+.info-form-box .desc-section-wrap:last-child {
+  margin-bottom: 0;
+}
+.info-form-box .desc-section-wrap .h2-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+.info-form-box .cnt-section-box {
+  border-top-left-radius: 0;
+}
+.info-form-box .desc-inner-wrap {
+  position: relative;
+  z-index: 2;
+  margin-top: -20px;
+}
+.info-form-box .title-inner-wrap {
+  margin-top: -20px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+}
+.info-form-box .title-inner-wrap .h1-title {
+  max-width: 240px;
+}
+.info-form-box .info-wrap {
+  margin-bottom: 16px;
+}
+.info-form-box .phone-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.info-form-box .phone-wrap .phone-title {
+  border-radius: 25px;
+  border: 1px solid #6FC287;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--clr-base);
+  line-height: 1;
+  text-align: left;
+  padding: 5px 50px 5px 25px;
+  width: 181px;
+  position: relative;
+  min-height: 50px;
+}
+.info-form-box .phone-wrap .phone-title:before {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  position: absolute;
+  background: #6FC287 url(../img/icons/phone.svg) center no-repeat;
+  background-size: 100% auto;
+  top: 50%;
+  right: 5px;
+  margin-top: -19px;
+}
+.info-form-box .phone-wrap .phone-photo {
+  display: block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-left: 3px;
+}
+.info-form-box .phone-wrap .elm-photo {
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.info-form-box .photo-inner-wrap {
+  position: relative;
+}
+.info-form-box .photo-inner-wrap .elm-photo {
+  aspect-ratio: 246/225;
+  border-radius: var(--radiusLarge);
+}
+.info-form-box .rounded-tab.tab-main {
+  height: 30px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 210px;
+  overflow: visible;
+}
+.info-form-box .rounded-tab.tab-main:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: var(--paddingContainer);
+  background: #fff;
+  display: none;
+}
+.info-form-box .rounded-tab.tab-main:before {
+  background: #fff;
+  --tabRadius: 15px;
+}
+.info-form-box .rounded-tab.tab-inner {
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 210px;
+  overflow: visible;
+}
+.info-form-box .rounded-tab.tab-inner:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: var(--paddingContainer);
+  background: #fff;
+  display: none;
+}
+.info-form-box .rounded-tab.tab-inner:before {
+  background: #fff;
+  border-top-left-radius: 0;
+  --tabRadius: 20px;
+}
+.info-form-box .frm-row,
+.info-form-box .frm-row-submit {
+  margin: 0;
+}
+.info-form-box .frm-field {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.info-form-box .field-submit {
+  padding-top: 5px;
+  margin-bottom: 0;
+}
+.info-form-box .field-submit .btn {
+  width: 100%;
+}
+.info-form-box .frm-field-input + .frm-field-input {
+  margin-top: 10px;
+}
+.info-form-box .field-title {
+  font-size: 1em;
+  line-height: normal;
+  font-weight: 400;
+  margin: 0 0 9px 0;
+  display: block;
+}
+.info-form-box .frm-title-wrap {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.info-form-box .frm-title {
+  font-size: 20px;
+  line-height: normal;
+  font-weight: bold;
+}
 .card-box {
   margin-bottom: 0;
 }
@@ -3949,6 +4136,41 @@ body .tippy-box .tippy-arrow {
   }
 }
 @media (min-width: 768px) {
+  .info-form-box .photo-inner-wrap .elm-photo {
+    aspect-ratio: 560/225;
+  }
+  .info-form-box .rounded-tab.tab-main {
+    width: 500px;
+  }
+  .info-form-box .rounded-tab.tab-inner {
+    width: 430px;
+  }
+  .info-form-box .info-inner-wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+        align-items: flex-start;
+  }
+  .info-form-box .phone-wrap {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .info-form-box .info-wrap {
+    -ms-flex: 1;
+        flex: 1;
+    padding: 0 3rem 0 0;
+  }
+  .info-form-box .info-wrap p {
+    max-width: 47.8125em;
+  }
+  .info-form-box .title-inner-wrap {
+    margin-top: -25px;
+  }
+  .info-form-box .title-inner-wrap .h1-title {
+    max-width: 470px;
+  }
   .form-inner-box {
     display: -ms-flexbox;
     display: flex;
@@ -4081,6 +4303,54 @@ body .tippy-box .tippy-arrow {
   }
 }
 @media (min-width: 992px) {
+  .info-form-box .box-inner-wrap {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .info-form-box .box-info-wrap {
+    width: 51%;
+    padding: 0 2.6rem 0 0;
+    margin-bottom: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .info-form-box .box-form-wrap {
+    width: 49%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin: 0;
+    padding: 3.5rem 5.4rem 2.7rem 4.8rem;
+  }
+  .info-form-box .desc-section-wrap:first-child .h2-title {
+    max-width: 400px;
+  }
+  .info-form-box .desc-inner-wrap .h2-title {
+    font-size: 2.4rem;
+  }
+  .info-form-box .cnt-section-box {
+    padding-left: 2.8rem;
+    padding-right: 2.8rem;
+  }
+  .info-form-box .info-inner-wrap {
+    margin-bottom: 3rem;
+  }
+  .info-form-box .title-inner-wrap {
+    margin-bottom: 4rem;
+  }
+  .info-form-box .info-wrap {
+    padding-top: 5px;
+  }
+  .info-form-box .frm-field {
+    margin-bottom: 20px;
+  }
+  .info-form-box .field-submit {
+    padding-top: 20px;
+    text-align: center;
+  }
+  .info-form-box .field-submit .btn {
+    width: auto;
+    min-width: 204px;
+  }
   .card-box {
     display: -ms-flexbox;
     display: flex;
