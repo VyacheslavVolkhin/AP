@@ -130,9 +130,14 @@ ol {
 	counter-reset: li; 
 	padding-bottom: 20px;
 	position: relative;
+	.tiles-box {
+		margin-bottom: 30px;
+		margin-left: -38px;
+		margin-right: 0;
+		padding-top: 20px;
+	}
 	&.with-out-digits {
 		&>li {
-			padding-left: ;
 			&:before {
 				display: none;
 			}
@@ -529,6 +534,9 @@ h6, .h6-title {
 			}
 		}
 	}
+	.title-large {
+		font-size: 25px;
+	}
 }
 @media (max-width: 767px) {
     :root {
@@ -588,6 +596,9 @@ h6, .h6-title {
 	}
 	.list-numbers {
 		padding-bottom: 5rem;
+		.tiles-box {
+			margin-bottom: 0;
+		}
 		.list-content-wrap {
 			padding-bottom: 4rem;
 		}

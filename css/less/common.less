@@ -389,6 +389,40 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 			}
 		}
 	}
+	.slider-inner-wrap.slider-mgrid[data-cols="5"] {
+		padding: 0;
+		.slider {
+			display: flex;
+			flex-wrap: wrap;
+			transform: none !important;
+			height: auto !important;
+		}
+		.slider-wrap {
+			margin: 0 -4px;
+		}
+		.sl-wrap {
+			margin-bottom: 8px;
+			padding: 0 4px;
+			width: 50% !important;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.swiper-slide:not(.swiper-slide-active) {
+			opacity: 1;
+			pointer-events: auto;
+		}
+		.ico-arrow, .slider-pagination {
+			display: none;
+		}
+	}
+}
+@media (max-width: 479px) {
+	.slider-inner-wrap.slider-mgrid[data-cols="5"] {
+		.sl-wrap {
+			width: 100% !important;
+		}
+	}
 }
 @media (min-width: 480px) {
 	.col-steps {
@@ -443,6 +477,22 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 	}
 }
 @media (min-width: 768px) {
+	.slider-inner-wrap {
+		&[data-cols="5"] {
+			.swiper-slide {
+				&.swiper-slide-active {
+					&+.swiper-slide {
+						opacity: 1;
+						pointer-events: auto;
+						&+.swiper-slide {
+							opacity: 1;
+							pointer-events: auto;
+						}
+					}
+				}
+			}
+		}
+	}
 	.col-2 {
 		.item-wrap {
 			width: 50%;
@@ -485,6 +535,26 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
     .elm-hidden-desktop {
         display: none !important;
     }
+	.slider-inner-wrap {
+		&[data-cols="5"] {
+			.swiper-slide {
+				&.swiper-slide-active {
+					&+.swiper-slide {
+						opacity: 1;
+						pointer-events: auto;
+						&+.swiper-slide {
+							opacity: 1;
+							pointer-events: auto;
+							&+.swiper-slide {
+								opacity: 1;
+								pointer-events: auto;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	.slider-inner-wrap {
 		padding-left: 0;
 		padding-right: 0;
@@ -568,6 +638,30 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 			width: 25%;
 			&.wrap-full {
 				width: 50%;
+			}
+		}
+	}
+	.slider-inner-wrap {
+		&[data-cols="5"] {
+			.swiper-slide {
+				&.swiper-slide-active {
+					&+.swiper-slide {
+						opacity: 1;
+						pointer-events: auto;
+						&+.swiper-slide {
+							opacity: 1;
+							pointer-events: auto;
+							&+.swiper-slide {
+								opacity: 1;
+								pointer-events: auto;
+								&+.swiper-slide {
+									opacity: 1;
+									pointer-events: auto;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

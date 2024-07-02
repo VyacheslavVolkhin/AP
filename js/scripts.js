@@ -373,6 +373,39 @@ sliderList.forEach(function (slider) {
               },
             });
             break;
+        case "5":
+            let swiperSliderTiles5 = new Swiper(sliderWrapper, {
+              loop: false,
+              slidesPerView: 3,
+              spaceBetween: 0,
+              autoHeight: true,
+              speed: 400,
+              pagination: {
+                el: ".slider-tiles-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                  return (
+                    '<span class="' + className + '">' + (index + 1) + "</span>"
+                  );
+                },
+              },
+              autoplay: false,
+              navigation: {
+                nextEl:
+                  ".btn-action-ico.ico-arrow.ico-arrow-next.button-slider-tiles-next",
+                prevEl:
+                  ".btn-action-ico.ico-arrow.ico-arrow-prev.button-slider-tiles-prev",
+              },
+              breakpoints: {
+                992: {
+                  slidesPerView: 4,
+                },
+                1200: {
+                  slidesPerView: 5,
+                },
+              },
+            });
+            break;
         default:
             let swiperSliderTiles = new Swiper(sliderWrapper, {
                 loop: false,

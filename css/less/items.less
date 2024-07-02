@@ -1,6 +1,31 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
+.item-tile-model {
+	display: block;
+	position: relative;
+	text-align: center;
+	color: var(--clr-base);
+	margin: 0 auto;
+	max-width: 246px;
+	&:hover {
+		color: var(--clr-base);
+		.tile-title {
+			color: var(--clr-att);
+		}
+	}
+	.tile-photo {
+		aspect-ratio: inherit;
+		height: 108px;
+	}
+	.tile-title {
+		font-size: 20px;
+		transition: all ease 0.2s;
+		line-height: normal;
+		margin: 10px 0 0 0;
+		font-weight: bold;
+	}
+}
 .item-tile-info-card {
 	border-radius: var(--radiusLarge);
 	background: #fff;
@@ -1108,6 +1133,14 @@ body {
 	}
 }
 @media (min-width: 992px) {
+	.item-tile-model {
+		padding-bottom: 20px;
+		.tile-photo {
+			max-width: 174px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 	.item-tile-info-card {
 		padding: 20px 20px 20px 27px;
 		.tile-title {
