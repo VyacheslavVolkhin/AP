@@ -1871,7 +1871,7 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 -8px -8px 0 0;
+  margin: 0 -8px -4px 0;
 }
 .item-tile-catalog .tile-color {
   width: 18px;
@@ -2992,7 +2992,7 @@ body .tippy-box .tippy-arrow {
 .main-actions-box .action-item-wrap .action-title {
   display: block;
   font-size: 20px;
-  line-height: n ormal;
+  line-height: normal;
   font-weight: 400;
   text-transform: uppercase;
   color: var(--clr-base);
@@ -3769,7 +3769,7 @@ body .tippy-box .tippy-arrow {
 }
 .form-inner-box .info-title {
   font-size: 16px;
-  line-height: norma;
+  line-height: normal;
   font-weight: 400;
   margin: 0 0 10px 0;
   color: var(--clr-base);
@@ -6174,7 +6174,7 @@ select.form-input:required:invalid {
   top: 100%;
   left: 100%;
   opacity: 0;
-  pointer-events: 0;
+  pointer-events: none;
   width: 0;
   height: 0;
   font-size: 0;
