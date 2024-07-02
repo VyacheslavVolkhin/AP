@@ -79,13 +79,33 @@ select.form-input:required:invalid {
 .btn {
 	height: 44px;
 	border-radius: var(--radiusMedium);
-	border: 1px solid var(--clr-att);
+	border-width: 0;
+	border-color: var(--clr-att);
+	border-style: solid;
 	background-color: var(--clr-att);
 	padding: 0 20px;
 	font-size: 15px;
 	font-weight: 400;
 	line-height: 20px;
 	color: #fff;
+	z-index: 2;
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;right: 0;
+		z-index: -1;
+		height: 100%;
+		transition: all ease 0.7s;
+		width: 0;
+		background: var(--clr-att-second);
+	}
+	&:hover {
+		&:after {
+			left: 0;
+			width: 100%;
+		}
+	}
 	&.button-full {
 		width: 100%;
 	}
@@ -100,6 +120,7 @@ select.form-input:required:invalid {
 	&.button-tab-main {
 		height: 50px;
 		padding: 0 10px;
+		border-width: 1px;;
 		border-radius: var(--radiusSmall);
 		background: #fff;
 		border: none;
@@ -110,9 +131,13 @@ select.form-input:required:invalid {
 			background: var(--clr-bg);
 			color: #fff;
 		}
+		&:after {
+			display: none;
+		}
 	}
 	&.button-tab {
 		height: 24px;
+		border-width: 1px;
 		border-radius: 12px;
 		border-color: #7A7A79;
 		background: transparent;
@@ -124,6 +149,9 @@ select.form-input:required:invalid {
 			background-color: var(--clr-bg);
 			border-color: var(--clr-bg);
 			color: #fff;
+		}
+		&:after {
+			display: none;
 		}
 	}
 	&.button-second {
@@ -157,6 +185,9 @@ select.form-input:required:invalid {
 		background: none;
 		border: none;
 		border-radius: 0;
+		&:after {
+			display: none;
+		}
 		&:hover {
 			border: none;
 			background: none;
@@ -204,6 +235,7 @@ select.form-input:required:invalid {
 		}
 	}
     &.button-border {
+		border-width: 1px;
         &:not(:hover) {
             background-color: transparent;
             color: var(--clr-att-hover);
