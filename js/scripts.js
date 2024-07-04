@@ -239,12 +239,17 @@ popupElements.forEach((element) => {
 // Popups
 let popupCurrent;
 
+
 document.querySelectorAll(".js-popup-open").forEach(function (element) {
   element.addEventListener("click", function (e) {
     document.querySelector(".popup-outer-box").classList.remove("active");
     document.body.classList.add("popup-open");
 
     popupCurrent = this.getAttribute("data-popup");
+    popupCurrentValue = this.getAttribute("data-popup-value");
+	if (popupCurrentValue) {
+		document.getElementById("select-service").selectedIndex = popupCurrentValue;
+	}
     document
       .querySelector(
         `.popup-outer-box[id="${popupCurrent}"

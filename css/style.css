@@ -4297,6 +4297,70 @@ body .tippy-box .tippy-arrow {
   position: relative;
   padding: 16px 20px;
 }
+body.popup-open {
+  overflow: hidden;
+}
+.popup-outer-box {
+  display: none;
+  padding: 50px var(--paddingContainer);
+  animation: fadein ease 0.2s;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: fixed;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.popup-outer-box.active {
+  display: -ms-flexbox;
+  display: flex;
+}
+.popup-box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  width: 1204px;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 20;
+}
+.popup-box.cnt-section-box {
+  margin: 0;
+}
+.popup-box .form-box {
+  margin-bottom: 0;
+}
+.popup-box .popup-title-wrap,
+.popup-box .popup-footer-wrap {
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.popup-box .popup-content-wrap {
+  width: 100%;
+  overflow: auto;
+  -ms-overflow-style: none;
+}
+.popup-box .popup-content-wrap::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.popup-box .btn-action-ico.ico-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
 @media (max-width: 991px) {
   .form-inner-box .frm-select label {
     font-size: 10px;
@@ -4530,6 +4594,10 @@ body .tippy-box .tippy-arrow {
   }
 }
 @media (min-width: 992px) {
+  .popup-box.cnt-section-box {
+    padding-top: 4rem;
+    padding-bottom: 20px;
+  }
   .main-actions-box {
     padding: 0;
     margin: 0;

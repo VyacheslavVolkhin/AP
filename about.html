@@ -834,6 +834,184 @@
         <!-- /footer -->
 
 
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box" id="popup-callback">
+            <div class="popup-box cnt-section-box">
+                <!-- <a href="" class="btn-action-ico ico-close js-popup-close"></a> -->
+                <div class="popup-content-wrap">
+                    <!--form-box-->
+                    <div class="form-box">
+                        <div class="frm-title-wrap">
+                            <div class="form-title h1-title title-vsmall">Форма обратной связи</div>
+                        </div>
+                        <div class="frm-content-wrap">
+                            <div class="frm-sections-wrap">
+                                <div class="frm-section-wrap">
+                                    <div class="frm-row">
+                                        <div class="frm-field">
+                                            <div class="field-title">Личные данные</div>
+                                            <div class="frm-field-input">
+                                                <div class="field-input-title">Ваше имя</div>
+                                                <input type="text" class="form-input" placeholder="Имя*">
+                                            </div>
+                                        </div>
+                                        <div class="frm-field">
+                                            <div class="field-title">Контактная информация</div>
+                                            <div class="frm-field-input">
+                                                <div class="field-input-title">Ваш телефон*</div>
+                                                <input type="text" class="form-input" placeholder="Телефон:">
+                                            </div>
+                                            <div class="frm-field-input">
+                                                <div class="field-input-title">Ваш e-mail*</div>
+                                                <input type="email" class="form-input" placeholder="Е-mail">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-section-wrap">
+                                    <div class="frm-row">
+                                        <div class="frm-field">
+                                            <div class="field-title">Текст письиа</div>
+                                            <textarea class="form-input" placeholder="Текст письиа"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-section-wrap section-submit">
+                                    <div class="frm-row-submit">
+                                        <div class="frm-field field-info">
+                                            <div class="frm-select sel-small">
+                                                <input type="checkbox" id="popup-select01">
+                                                <label for="popup-select01">Согласие на обработку <a href="">персональных данных</a></label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-field field-submit">
+                                            <button type="submit" class="btn">Отправить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/form-box-->
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box" id="popup-order">
+            <div class="popup-box cnt-section-box">
+                <!-- <a href="" class="btn-action-ico ico-close js-popup-close"></a> -->
+                <div class="popup-content-wrap">
+                    <!--form-box-->
+                    <div class="form-box">
+                        <div class="frm-title-wrap">
+                            <div class="form-title h1-title title-small">Оставить заявку</div>
+                        </div>
+                        <div class="frm-content-wrap">
+                            <div class="frm-row">
+                                <div class="frm-field field-half">
+                                    <div class="field-title">Личные данные</div>
+                                    <div class="frm-field-input">
+                                        <div class="field-input-title">Ваше имя</div>
+                                        <input type="text" class="form-input" placeholder="Имя*">
+                                    </div>
+                                </div>
+                                <div class="frm-field field-half">
+                                    <div class="field-title">Контактная информация</div>
+                                    <div class="frm-field-input">
+                                        <div class="field-input-title">Ваш телефон*</div>
+                                        <input type="text" class="form-input" placeholder="Телефон:">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frm-row-submit">
+                                <div class="frm-field field-info">
+                                    <div class="frm-select sel-small">
+                                        <input type="checkbox" id="popup-select02">
+                                        <label for="popup-select02">Согласие на обработку <a href="">персональных данных</a></label>
+                                    </div>
+                                </div>
+                                <div class="frm-field field-submit">
+                                    <button type="submit" class="btn">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/form-box-->
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box" id="popup-reg">
+            <div class="popup-box cnt-section-box">
+                <!-- <a href="" class="btn-action-ico ico-close js-popup-close"></a> -->
+                <div class="popup-content-wrap">
+                    <!--form-box-->
+                    <div class="form-box">
+                        <div class="frm-title-wrap">
+                            <div class="form-title h1-title title-vsmall">Запись на сервис</div>
+                        </div>
+                        <div class="frm-content-wrap">
+                            <div class="frm-sections-wrap">
+                                <div class="frm-section-wrap">
+                                    <div class="frm-row">
+                                        <div class="frm-field">
+                                            <div class="field-title">Личные данные</div>
+                                            <div class="frm-field-input">
+                                                <div class="field-input-title">Причина обращения</div>
+                                                <select class="form-input" required id="select-service">
+                                                    <option selected disabled hidden value="">Причина обращения</option><!--placeholder-->
+                                                    <option value="1">Записаться на плановое ТО</option>
+                                                    <option value="2">Записаться на слесарный ремонт</option>
+                                                    <option value="3">Записаться на кузовной ремонт</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="frm-field">
+                                            <div class="field-title">Контактная информация</div>
+                                            <div class="frm-field-input">
+                                                <div class="field-input-title">Ваш телефон*</div>
+                                                <input type="text" class="form-input" placeholder="Телефон:">
+                                            </div>
+                                            <div class="frm-field-input">
+                                                <div class="field-input-title">Ваш e-mail*</div>
+                                                <input type="email" class="form-input" placeholder="Е-mail">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-section-wrap">
+                                    <div class="frm-row">
+                                        <div class="frm-field">
+                                            <div class="field-title">Текст письиа</div>
+                                            <textarea class="form-input" placeholder="Текст письиа"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-section-wrap section-submit">
+                                    <div class="frm-row-submit">
+                                        <div class="frm-field field-info">
+                                            <div class="frm-select sel-small">
+                                                <input type="checkbox" id="popup-select03">
+                                                <label for="popup-select03">Согласие на обработку <a href="">персональных данных</a></label>
+                                            </div>
+                                        </div>
+                                        <div class="frm-field field-submit">
+                                            <button type="submit" class="btn">Отправить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/form-box-->
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+
     </div>
     <!-- /wrap -->
 
