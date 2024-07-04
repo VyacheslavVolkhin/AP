@@ -18,6 +18,11 @@
     <script src="./js/popper.min.js" defer></script>
     <script src="./js/tippy-bundle.umd.js" defer></script>
     <script src="./js/scripts.js" defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -29,7 +34,7 @@
         <header class="header">
             <div class="inner-wrap">
                 <div class="logo-wrap">
-                    <a href="" class="logo">
+                    <a href="index.html" class="logo">
                         <img title="Image title" loading="lazy" src="./img/main/logo.svg" alt="Image alt">
                     </a>
                 </div>
@@ -86,6 +91,7 @@
         </header>
         <!-- /header -->
 
+
         <!-- page -->
         <div class="page-full">
 
@@ -93,7 +99,7 @@
             <div class="breadcrumbs-box">
                 <ol class="menu">
                     <li><a href="">Главная</a></li>
-                    <li><a href="">Trade-in</a></li>
+                    <li><span>Trade-in</span></li>
                 </ol>
             </div>
             <!--/breadcrumbs-box-->
@@ -111,12 +117,12 @@
                         <p>Обмен вашего автомобиля на новый или с пробегом. Вы сможете уехать на новом автомобиле в день обращения и получить
                             максимально возможную цену за свой автомобиль!</p>
                         <div class="info-action">
-                            <div class="btn button-link button-link-light-text">
+                            <a href="#form" class="btn button-link button-link-light-text js-anchor">
                                 <div class="button-title">Оставить заявку</div>
                                 <div class="button-ico">
                                     <img title="Image title" loading="lazy" src="./img/icons/arrow-more-second.svg" alt="Image alt">
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="rounded-tab right"></div>
                     </div>
@@ -192,7 +198,7 @@
             <!--/article-box-->
 
             <!--form-box-->
-            <div class="form-box">
+            <div class="form-box" id="form">
                 <div class="title-page-wrap">
                     <h2 class="h1-title">Оставить заявку</h2>
                 </div>
@@ -315,8 +321,8 @@
                             <div class="frm-row-submit">
                                 <div class="frm-field field-info">
                                     <div class="frm-select sel-small">
-                                        <input type="checkbox" id="form">
-                                        <label for="form">Согласие на обработку <a href="">персональных данных</a></label>
+                                        <input type="checkbox" id="form01">
+                                        <label for="form01">Согласие на обработку <a href="">персональных данных</a></label>
                                     </div>
                                 </div>
                                 <div class="frm-field field-submit">
@@ -409,7 +415,7 @@
                             </div>
                         </div>
                         <div class="action-inner-wrap">
-                            <a href="" class="btn">Заказать звонок</a>
+                            <a href="" class="btn js-popup-open" data-popup="popup-callback">Заказать звонок</a>
                         </div>
                     </div>
                 </div>

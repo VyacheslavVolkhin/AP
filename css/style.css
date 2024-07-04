@@ -289,6 +289,9 @@ ol > li:nth-child(9) ~ li {
 .list-numbers .active .list-title:before {
   transform: rotate(90deg);
 }
+.list-numbers .list-title.active:before {
+  transform: rotate(90deg);
+}
 a {
   text-decoration: none;
   color: var(--clr-att);
@@ -586,6 +589,9 @@ h6:last-child,
 .text-center,
 .title-center {
   text-align: center;
+}
+[id] {
+  scroll-margin-top: 15px;
 }
 @media (max-width: 1199px) {
   :root {
@@ -963,6 +969,8 @@ html {
 .popup-menu-wrap .menu-inner-wrap .btn-menu {
   display: inline-block;
   vertical-align: top;
+  position: relative;
+  overflow: hidden;
   font-weight: bold;
   max-width: 100%;
   font-size: 16px;
@@ -979,11 +987,28 @@ html {
 .popup-menu-wrap .menu-inner-wrap .btn-menu.button-att {
   background-color: var(--clr-att);
   color: #fff;
+  z-index: 2;
 }
 .popup-menu-wrap .menu-inner-wrap .btn-menu.button-att:hover {
-  background-color: var(--clr-att-hover);
-  border-color: var(--clr-att-hover);
+  background-color: var(--clr-att);
+  border-color: var(--clr-att);
   color: #fff;
+}
+.popup-menu-wrap .menu-inner-wrap .btn-menu.button-att:hover:after {
+  left: 0;
+  width: 100%;
+}
+.popup-menu-wrap .menu-inner-wrap .btn-menu.button-att:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  transition: all ease 0.7s;
+  width: 0;
+  background: var(--clr-att-second);
 }
 .popup-menu-wrap .menu li {
   break-inside: avoid-column;
@@ -2178,6 +2203,22 @@ html {
 .item-tile-info-catalog .tile-title:first-child {
   margin-top: 0;
 }
+.item-tile-article .tile-title a,
+.item-tile-vacantion .tile-title a,
+.item-tile-info-catalog .tile-title a,
+.item-tile-article p a,
+.item-tile-vacantion p a,
+.item-tile-info-catalog p a {
+  transition: all ease 0.2s;
+}
+.item-tile-article .tile-title a:not(:hover),
+.item-tile-vacantion .tile-title a:not(:hover),
+.item-tile-info-catalog .tile-title a:not(:hover),
+.item-tile-article p a:not(:hover),
+.item-tile-vacantion p a:not(:hover),
+.item-tile-info-catalog p a:not(:hover) {
+  color: inherit;
+}
 .item-tile-article .btn {
   width: 100%;
   border-radius: var(--radiusSmall);
@@ -3060,6 +3101,9 @@ body .tippy-box .tippy-arrow {
 }
 .main-actions-box .slider-pagination .swiper-pagination-bullet {
   margin: 0 0 0 22px;
+}
+.main-actions-box .slider-inner-wrap .swiper-slide {
+  transition-delay: 0.2s;
 }
 .info-form-box {
   margin-bottom: 20px;

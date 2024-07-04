@@ -154,6 +154,8 @@ html {
 		.btn-menu {
 			display: inline-block;
 			vertical-align: top;
+			position: relative;
+			overflow: hidden;
 			font-weight: bold;
 			max-width: 100%;
 			font-size: 16px;
@@ -168,10 +170,26 @@ html {
 			&.button-att {
 				background-color: var(--clr-att);
 				color: #fff;
+				z-index: 2;
 				&:hover {
-					background-color: var(--clr-att-hover);
-					border-color: var(--clr-att-hover);
+					background-color: var(--clr-att);
+					border-color: var(--clr-att);
 					color: #fff;
+					&:after {
+						left: 0;
+						width: 100%;
+					}
+				}
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 0;right: 0;
+					z-index: -1;
+					height: 100%;
+					transition: all ease 0.7s;
+					width: 0;
+					background: var(--clr-att-second);
 				}
 			}
 		}

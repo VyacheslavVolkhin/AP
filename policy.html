@@ -18,6 +18,11 @@
     <script src="./js/popper.min.js" defer></script>
     <script src="./js/tippy-bundle.umd.js" defer></script>
     <script src="./js/scripts.js" defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -29,7 +34,7 @@
         <header class="header">
             <div class="inner-wrap">
                 <div class="logo-wrap">
-                    <a href="" class="logo">
+                    <a href="index.html" class="logo">
                         <img title="Image title" loading="lazy" src="./img/main/logo.svg" alt="Image alt">
                     </a>
                 </div>
@@ -86,6 +91,7 @@
         </header>
         <!-- /header -->
 
+
         <!-- page -->
         <div class="page-full">
 
@@ -93,7 +99,7 @@
             <div class="breadcrumbs-box">
                 <ol class="menu">
                     <li><a href="">Главная</a></li>
-                    <li><a href="">Политика конфиденциальности</a></li>
+                    <li><span>Политика конфиденциальности</span></li>
                 </ol>
             </div>
             <!--/breadcrumbs-box-->
@@ -107,9 +113,9 @@
             <!--tiles-info-box-->
             <div class="tiles-info-box">
                 <ol class="list-numbers">
-                    <li class="list-item active">
-                        <div class="list-title">Общие положения</div>
-                        <div class="list-content-wrap">
+                    <li class="list-item js-popup-wrap no-close">
+                        <div class="list-title js-btn-popup-toggle active">Общие положения</div>
+                        <div class="list-content-wrap js-popup-block">
                             <ol>
                                 <li>
                                     <p>Настоящая Политика содержит описание принципов и подходов АО «РОЛЬФ» (далее – Компания) в отношении обработки и
@@ -152,9 +158,9 @@
                             </ol>
                         </div>
                     </li>
-                    <li class="list-item">
-                        <div class="list-title">Субъекты персональных данных и цели обработки персональных данных</div>
-                        <div class="list-content-wrap">
+                    <li class="list-item js-popup-wrap no-close">
+                        <div class="list-title js-btn-popup-toggle">Субъекты персональных данных и цели обработки персональных данных</div>
+                        <div class="list-content-wrap js-popup-block">
                             <ol>
                                 <li>
                                     <p>Настоящая Политика содержит описание принципов и подходов АО «РОЛЬФ» (далее – Компания) в отношении обработки и
@@ -197,9 +203,9 @@
                             </ol>
                         </div>
                     </li>
-                    <li class="list-item">
-                        <div class="list-title">Права и обязанности субъектов персональных данных</div>
-                        <div class="list-content-wrap">
+                    <li class="list-item js-popup-wrap no-close">
+                        <div class="list-title js-btn-popup-toggle">Права и обязанности субъектов персональных данных</div>
+                        <div class="list-content-wrap js-popup-block">
                             <ol>
                                 <li>
                                     <p>Настоящая Политика содержит описание принципов и подходов АО «РОЛЬФ» (далее – Компания) в отношении обработки и
@@ -242,9 +248,9 @@
                             </ol>
                         </div>
                     </li>
-                    <li class="list-item">
-                        <div class="list-title">Конфиденциальность персональных данных</div>
-                        <div class="list-content-wrap">
+                    <li class="list-item js-popup-wrap no-close">
+                        <div class="list-title js-btn-popup-toggle">Конфиденциальность персональных данных</div>
+                        <div class="list-content-wrap js-popup-block">
                             <ol>
                                 <li>
                                     <p>Настоящая Политика содержит описание принципов и подходов АО «РОЛЬФ» (далее – Компания) в отношении обработки и
@@ -287,9 +293,9 @@
                             </ol>
                         </div>
                     </li>
-                    <li class="list-item">
-                        <div class="list-title">Сбор персональных данных с использованием сайта</div>
-                        <div class="list-content-wrap">
+                    <li class="list-item js-popup-wrap no-close">
+                        <div class="list-title js-btn-popup-toggle">Сбор персональных данных с использованием сайта</div>
+                        <div class="list-content-wrap js-popup-block">
                             <ol>
                                 <li>
                                     <p>Настоящая Политика содержит описание принципов и подходов АО «РОЛЬФ» (далее – Компания) в отношении обработки и
@@ -332,9 +338,9 @@
                             </ol>
                         </div>
                     </li>
-                    <li class="list-item">
-                        <div class="list-title">Реализованные требования по обеспечению безопасности персональных данных</div>
-                        <div class="list-content-wrap">
+                    <li class="list-item js-popup-wrap no-close">
+                        <div class="list-title js-btn-popup-toggle">Реализованные требования по обеспечению безопасности персональных данных</div>
+                        <div class="list-content-wrap js-popup-block">
                             <ol>
                                 <li>
                                     <p>Настоящая Политика содержит описание принципов и подходов АО «РОЛЬФ» (далее – Компания) в отношении обработки и
@@ -461,7 +467,7 @@
                             </div>
                         </div>
                         <div class="action-inner-wrap">
-                            <a href="" class="btn">Заказать звонок</a>
+                            <a href="" class="btn js-popup-open" data-popup="popup-callback">Заказать звонок</a>
                         </div>
                     </div>
                 </div>

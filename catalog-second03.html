@@ -18,6 +18,11 @@
     <script src="./js/popper.min.js" defer></script>
     <script src="./js/tippy-bundle.umd.js" defer></script>
     <script src="./js/scripts.js" defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -29,7 +34,7 @@
         <header class="header">
             <div class="inner-wrap">
                 <div class="logo-wrap">
-                    <a href="" class="logo">
+                    <a href="index.html" class="logo">
                         <img title="Image title" loading="lazy" src="./img/main/logo.svg" alt="Image alt">
                     </a>
                 </div>
@@ -86,6 +91,7 @@
         </header>
         <!-- /header -->
 
+
         <!-- page -->
         <div class="page-full">
 
@@ -95,7 +101,7 @@
                     <li><a href="">Главная</a></li>
                     <li><a href="">Новые автомобили</a></li>
                     <li><a href="">OMODA</a></li>
-                    <li><a href="">OMODA C5</a></li>
+                    <li><span>OMODA C5</span></li>
                 </ol>
             </div>
             <!--/breadcrumbs-box-->
@@ -380,10 +386,10 @@
                     </div>
                     <div class="actions-inner-wrap">
                         <div class="action-wrap">
-                            <a href="" class="btn">Купить</a>
+                            <a href="" class="btn js-popup-open" data-popup="popup-buy">Купить</a>
                         </div>
                         <div class="action-wrap">
-                            <a href="" class="btn button-border">Заказать звонок</a>
+                            <a href="" class="btn button-border js-popup-open" data-popup="popup-callback">Заказать звонок</a>
                         </div>
                     </div>
                     <div class="features-inner-wrap">
@@ -509,9 +515,9 @@
             <!--tiles-info-box-->
             <div class="tiles-info-box">
                 <ol class="list-numbers with-out-digits">
-                    <li class="list-item">
-                        <div class="list-title">Комплектация</div>
-                        <div class="list-content-wrap">
+                    <li class="list-item js-popup-wrap no-close">
+                        <div class="list-title js-btn-popup-toggle">Комплектация</div>
+                        <div class="list-content-wrap js-popup-block">
                             <p>Ключевой особенностью новой серии фастбэк-кроссовера в исполнении Trendy Red является насыщенный красный цвет кузова,
                                 который идеально подчеркивает геометрию автомобиля, привлекая к нему еще больше внимания.</p>
                             <p>Новая версия Trendy Red стала долгожданным дополнением к представленной ранее особой серии Black Diamond в линейке
@@ -525,9 +531,9 @@
                                 всех остальных комплектаций, включая версии с полным приводом.</p>
                         </div>
                     </li>
-                    <li class="list-item">
-                        <div class="list-title">Размеры</div>
-                        <div class="list-content-wrap">
+                    <li class="list-item js-popup-wrap no-close">
+                        <div class="list-title js-btn-popup-toggle">Размеры</div>
+                        <div class="list-content-wrap js-popup-block">
                             <p>Ключевой особенностью новой серии фастбэк-кроссовера в исполнении Trendy Red является насыщенный красный цвет кузова,
                                 который идеально подчеркивает геометрию автомобиля, привлекая к нему еще больше внимания.</p>
                             <p>Новая версия Trendy Red стала долгожданным дополнением к представленной ранее особой серии Black Diamond в линейке
@@ -546,9 +552,9 @@
                                 всех остальных комплектаций, включая версии с полным приводом.</p>
                         </div>
                     </li>
-                    <li class="list-item">
-                        <div class="list-title">Эксплуатационные показатели</div>
-                        <div class="list-content-wrap">
+                    <li class="list-item js-popup-wrap no-close">
+                        <div class="list-title js-btn-popup-toggle">Эксплуатационные показатели</div>
+                        <div class="list-content-wrap js-popup-block">
                             <p>Ключевой особенностью новой серии фастбэк-кроссовера в исполнении Trendy Red является насыщенный красный цвет кузова,
                                 который идеально подчеркивает геометрию автомобиля, привлекая к нему еще больше внимания.</p>
                             <p>Новая версия Trendy Red стала долгожданным дополнением к представленной ранее особой серии Black Diamond в линейке
@@ -567,9 +573,9 @@
                                 всех остальных комплектаций, включая версии с полным приводом.</p>
                         </div>
                     </li>
-                    <li class="list-item active">
-                        <div class="list-title">Описание модели</div>
-                        <div class="list-content-wrap">
+                    <li class="list-item js-popup-wrap no-close ">
+                        <div class="list-title js-btn-popup-toggle active">Описание модели</div>
+                        <div class="list-content-wrap js-popup-block">
                             <p>Ключевой особенностью новой серии фастбэк-кроссовера в исполнении Trendy Red является насыщенный красный цвет кузова,
                                 который идеально подчеркивает геометрию автомобиля, привлекая к нему еще больше внимания.</p>
                             <p>Новая версия Trendy Red стала долгожданным дополнением к представленной ранее особой серии Black Diamond в линейке
@@ -617,7 +623,7 @@
                             </div>
                         </div>
                         <div class="action-wrap">
-                            <a href="" class="btn">Заказать звонок</a>
+                            <a href="" class="btn js-popup-open" data-popup="popup-callback">Заказать звонок</a>
                         </div>
                     </div>
                 </div>
@@ -628,11 +634,11 @@
             <div class="tile-item-box">
                 <div class="item-inner-wrap">
                     <div class="item-tile-catalog tile-row">
-                        <a href="" class="tile-link"></a>
+
                         <div class="tile-photo-wrap">
-                            <div class="tile-photo photo-contain">
+                            <a href="" class="tile-photo photo-contain">
                                 <img title="Image title" loading="lazy" src="./img/cat-main.png" alt="Image alt">
-                            </div>
+                            </a>
                         </div>
                         <div class="tile-info-wrap">
                             <div class="tile-stickers-wrap">
@@ -662,7 +668,7 @@
                         </div>
                         <div class="tile-action-wrap">
                             <a href="" class="btn">Купить</a>
-                            <a href="" class="btn button-border">Заказать звонок</a>
+                            <a href="" class="btn button-border js-popup-open" data-popup="popup-callback">Заказать звонок</a>
                         </div>
                     </div>
                 </div>
@@ -678,7 +684,7 @@
                     <!--item wrap-->
                     <div class="item-wrap">
                         <div class="item-tile-catalog">
-                            <a href="" class="tile-link"></a>
+
                             <div class="tile-stickers-wrap">
                                 <div class="tile-sticker st-att-second">В наличии в 3 автоцентрах</div>
                                 <div class="tile-sticker st-att">Акция</div>
@@ -690,9 +696,9 @@
                                 </div>
                             </div>
                             <div class="tile-photo-wrap">
-                                <div class="tile-photo photo-contain">
+                                <a href="" class="tile-photo photo-contain">
                                     <img title="Image title" loading="lazy" src="./img/cat-vw01.jpg" alt="Image alt">
-                                </div>
+                                </a>
                             </div>
                             <div class="tile-info-wrap">
                                 <div class="tile-title-wrap">
@@ -727,7 +733,7 @@
                     <!--item wrap-->
                     <div class="item-wrap">
                         <div class="item-tile-catalog">
-                            <a href="" class="tile-link"></a>
+
                             <div class="tile-stickers-wrap">
                                 <div class="tile-sticker st-att-second">В наличии в 3 автоцентрах</div>
                                 <div class="tile-sticker st-att">Акция</div>
@@ -739,9 +745,9 @@
                                 </div>
                             </div>
                             <div class="tile-photo-wrap">
-                                <div class="tile-photo photo-contain">
+                                <a href="" class="tile-photo photo-contain">
                                     <img title="Image title" loading="lazy" src="./img/cat-vw02.jpg" alt="Image alt">
-                                </div>
+                                </a>
                             </div>
                             <div class="tile-info-wrap">
                                 <div class="tile-title-wrap">
@@ -777,7 +783,7 @@
                     <!--item wrap-->
                     <div class="item-wrap">
                         <div class="item-tile-catalog">
-                            <a href="" class="tile-link"></a>
+
                             <div class="tile-stickers-wrap">
                                 <div class="tile-sticker st-att-second">В наличии в 3 автоцентрах</div>
                                 <div class="tile-sticker st-att">Акция</div>
@@ -789,9 +795,9 @@
                                 </div>
                             </div>
                             <div class="tile-photo-wrap">
-                                <div class="tile-photo photo-contain">
+                                <a href="" class="tile-photo photo-contain">
                                     <img title="Image title" loading="lazy" src="./img/cat-vw01.jpg" alt="Image alt">
-                                </div>
+                                </a>
                             </div>
                             <div class="tile-info-wrap">
                                 <div class="tile-title-wrap">
@@ -827,7 +833,7 @@
                     <!--item wrap-->
                     <div class="item-wrap">
                         <div class="item-tile-catalog">
-                            <a href="" class="tile-link"></a>
+
                             <div class="tile-stickers-wrap">
                                 <div class="tile-sticker st-att-second">В наличии в 3 автоцентрах</div>
                                 <div class="tile-sticker st-att">Акция</div>
@@ -839,9 +845,9 @@
                                 </div>
                             </div>
                             <div class="tile-photo-wrap">
-                                <div class="tile-photo photo-contain">
+                                <a href="" class="tile-photo photo-contain">
                                     <img title="Image title" loading="lazy" src="./img/cat-vw02.jpg" alt="Image alt">
-                                </div>
+                                </a>
                             </div>
                             <div class="tile-info-wrap">
                                 <div class="tile-title-wrap">
@@ -887,7 +893,7 @@
                     <!--item wrap-->
                     <div class="item-wrap">
                         <div class="item-tile-catalog">
-                            <a href="" class="tile-link"></a>
+
                             <div class="tile-stickers-wrap">
                                 <div class="tile-sticker st-att-second">В наличии в 3 автоцентрах</div>
                                 <div class="tile-sticker st-att">Акция</div>
@@ -899,9 +905,9 @@
                                 </div>
                             </div>
                             <div class="tile-photo-wrap">
-                                <div class="tile-photo photo-contain">
+                                <a href="" class="tile-photo photo-contain">
                                     <img title="Image title" loading="lazy" src="./img/cat-vw01.jpg" alt="Image alt">
-                                </div>
+                                </a>
                             </div>
                             <div class="tile-info-wrap">
                                 <div class="tile-title-wrap">
@@ -936,7 +942,7 @@
                     <!--item wrap-->
                     <div class="item-wrap">
                         <div class="item-tile-catalog">
-                            <a href="" class="tile-link"></a>
+
                             <div class="tile-stickers-wrap">
                                 <div class="tile-sticker st-att-second">В наличии в 3 автоцентрах</div>
                                 <div class="tile-sticker st-att">Акция</div>
@@ -948,9 +954,9 @@
                                 </div>
                             </div>
                             <div class="tile-photo-wrap">
-                                <div class="tile-photo photo-contain">
+                                <a href="" class="tile-photo photo-contain">
                                     <img title="Image title" loading="lazy" src="./img/cat-vw02.jpg" alt="Image alt">
-                                </div>
+                                </a>
                             </div>
                             <div class="tile-info-wrap">
                                 <div class="tile-title-wrap">
@@ -986,7 +992,7 @@
                     <!--item wrap-->
                     <div class="item-wrap">
                         <div class="item-tile-catalog">
-                            <a href="" class="tile-link"></a>
+
                             <div class="tile-stickers-wrap">
                                 <div class="tile-sticker st-att-second">В наличии в 3 автоцентрах</div>
                                 <div class="tile-sticker st-att">Акция</div>
@@ -998,9 +1004,9 @@
                                 </div>
                             </div>
                             <div class="tile-photo-wrap">
-                                <div class="tile-photo photo-contain">
+                                <a href="" class="tile-photo photo-contain">
                                     <img title="Image title" loading="lazy" src="./img/cat-vw01.jpg" alt="Image alt">
-                                </div>
+                                </a>
                             </div>
                             <div class="tile-info-wrap">
                                 <div class="tile-title-wrap">
@@ -1036,7 +1042,7 @@
                     <!--item wrap-->
                     <div class="item-wrap">
                         <div class="item-tile-catalog">
-                            <a href="" class="tile-link"></a>
+
                             <div class="tile-stickers-wrap">
                                 <div class="tile-sticker st-att-second">В наличии в 3 автоцентрах</div>
                                 <div class="tile-sticker st-att">Акция</div>
@@ -1048,9 +1054,9 @@
                                 </div>
                             </div>
                             <div class="tile-photo-wrap">
-                                <div class="tile-photo photo-contain">
+                                <a href="" class="tile-photo photo-contain">
                                     <img title="Image title" loading="lazy" src="./img/cat-vw02.jpg" alt="Image alt">
-                                </div>
+                                </a>
                             </div>
                             <div class="tile-info-wrap">
                                 <div class="tile-title-wrap">
@@ -1166,7 +1172,7 @@
                             </div>
                         </div>
                         <div class="action-inner-wrap">
-                            <a href="" class="btn">Заказать звонок</a>
+                            <a href="" class="btn js-popup-open" data-popup="popup-callback">Заказать звонок</a>
                         </div>
                     </div>
                 </div>

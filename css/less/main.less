@@ -298,6 +298,13 @@ ol {
 			}
 		}
 	}
+	.list-title {
+		&.active {
+			&:before {
+				transform: rotate(90deg);
+			}
+		}
+	}
 }
 a {
     text-decoration: none;
@@ -508,6 +515,9 @@ h6, .h6-title {
 }
 .text-center, .title-center {
     text-align: center;
+}
+[id] {
+	scroll-margin-top: 15px;
 }
 @media (max-width: 1199px) {
     :root {

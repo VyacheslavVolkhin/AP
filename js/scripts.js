@@ -1,3 +1,12 @@
+//button scroll 
+document.querySelectorAll('.js-anchor').forEach(anchor => {
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault();
+		document.querySelector(this.getAttribute('href')).scrollIntoView({
+			behavior: 'smooth'
+		});
+	});
+});
 
 
 //files add
@@ -282,6 +291,32 @@ sliderList.forEach(function (slider) {
     let sliderArrowPrev = slider.querySelector(".button-slider-tiles-prev");
     let sliderPagination = slider.querySelector(".slider-tiles-pagination");
     switch (sliderCols) {
+        case "1":
+            let swiperSliderTiles1 = new Swiper(sliderWrapper, {
+              loop: false,
+              slidesPerView: 1,
+              spaceBetween: 0,
+              autoHeight: true,
+              speed: 500,
+              pagination: {
+                el: sliderPagination,
+                clickable: true,
+                renderBullet: function (index, className) {
+                  return (
+                    '<span class="' + className + '">' + (index + 1) + "</span>"
+                  );
+                },
+              },
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+              },
+              navigation: {
+                nextEl: sliderArrowNext,
+                prevEl: sliderArrowPrev,
+              },
+            });
+            break;
         case "2":
             let swiperSliderTiles2 = new Swiper(sliderWrapper, {
               loop: false,
