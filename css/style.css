@@ -384,7 +384,9 @@ a.link-main,
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.title-page-wrap.title-contacts .h1-title {
+.title-page-wrap.title-contacts .h1-title,
+.title-page-wrap.title-contacts h1,
+.title-page-wrap.title-contacts h2 {
   width: 100%;
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
@@ -614,7 +616,10 @@ h6:last-child,
   .title-page-wrap .tabs-inner-wrap.tabs-buttons .btn {
     width: 100%;
   }
-  .title-large {
+  .title-large h1,
+  .title-large .h1-title,
+  .title-large h2,
+  .title-large .h2-title {
     font-size: 25px;
   }
 }
@@ -624,7 +629,9 @@ h6:last-child,
   }
 }
 @media (min-width: 480px) {
-  .title-page-wrap.title-contacts .h1-title {
+  .title-page-wrap.title-contacts .h1-title,
+  .title-page-wrap.title-contacts h1,
+  .title-page-wrap.title-contacts h2 {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     width: auto;
@@ -778,6 +785,18 @@ h6:last-child,
   .h1-title.title-vsmall,
   h2.title-vsmall,
   .h2-title.title-vsmall {
+    font-size: 24px;
+  }
+  .title-small .article-title,
+  .title-vsmall .article-title,
+  .title-small h1,
+  .title-vsmall h1,
+  .title-small .h1-title,
+  .title-vsmall .h1-title,
+  .title-small h2,
+  .title-vsmall h2,
+  .title-small .h2-title,
+  .title-vsmall .h2-title {
     font-size: 24px;
   }
 }
@@ -3128,13 +3147,17 @@ body .tippy-box .tippy-arrow {
 .info-form-box .desc-section-wrap {
   margin-bottom: 20px;
 }
-.info-form-box .desc-section-wrap:first-child .h2-title {
+.info-form-box .desc-section-wrap:first-child .h2-title,
+.info-form-box .desc-section-wrap:first-child h1,
+.info-form-box .desc-section-wrap:first-child h2 {
   max-width: 240px;
 }
 .info-form-box .desc-section-wrap:last-child {
   margin-bottom: 0;
 }
-.info-form-box .desc-section-wrap .h2-title {
+.info-form-box .desc-section-wrap .h2-title,
+.info-form-box .desc-section-wrap h1,
+.info-form-box .desc-section-wrap h2 {
   font-size: 20px;
   font-weight: bold;
   margin: 0 0 10px 0;
@@ -3153,7 +3176,9 @@ body .tippy-box .tippy-arrow {
   z-index: 2;
   margin-bottom: 10px;
 }
-.info-form-box .title-inner-wrap .h1-title {
+.info-form-box .title-inner-wrap .h1-title,
+.info-form-box .title-inner-wrap h1,
+.info-form-box .title-inner-wrap h2 {
   max-width: 240px;
 }
 .info-form-box .info-wrap {
@@ -3389,7 +3414,9 @@ body .tippy-box .tippy-arrow {
   font-weight: 400;
   color: var(--clr-base-light);
 }
-.card-box .h2-title {
+.card-box .h2-title,
+.card-box h1,
+.card-box h2 {
   display: block;
   font-size: 18px;
   font-weight: bold;
@@ -3527,6 +3554,9 @@ body .tippy-box .tippy-arrow {
   margin-bottom: 30px;
   padding-top: 20px;
 }
+.filter-box.filter-ext .js-filter-toggle .button-ico {
+  transform: scaleY(-1);
+}
 .filter-box .bg-inner-wrap {
   background: #fff;
 }
@@ -3537,7 +3567,9 @@ body .tippy-box .tippy-arrow {
 .filter-box .title-page-wrap {
   position: static;
 }
-.filter-box .title-page-wrap .h1-title {
+.filter-box .title-page-wrap .h1-title,
+.filter-box .title-page-wrap h1,
+.filter-box .title-page-wrap h2 {
   font-size: 26px;
 }
 .filter-box .title-page-wrap .title-button {
@@ -3560,6 +3592,7 @@ body .tippy-box .tippy-arrow {
   margin: 0 -1.2rem;
 }
 .filter-box .row-tags {
+  animation: fadein ease 0.2s;
   padding-top: 5px;
 }
 .filter-box .row-tags .frm-field {
@@ -3661,7 +3694,9 @@ body .tippy-box .tippy-arrow {
   width: 100%;
   margin-bottom: 15px;
 }
-.error-top-box .h1-title {
+.error-top-box .h1-title,
+.error-top-box h1,
+.error-top-box h2 {
   font-size: 25px;
   font-weight: bold;
   color: inherit;
@@ -3761,7 +3796,9 @@ body .tippy-box .tippy-arrow {
   position: relative;
   padding-top: 25px;
 }
-.form-inner-box .title-inner-wrap .h1-title {
+.form-inner-box .title-inner-wrap .h1-title,
+.form-inner-box .title-inner-wrap h1,
+.form-inner-box .title-inner-wrap h2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -4199,7 +4236,9 @@ body .tippy-box .tippy-arrow {
   background: var(--clr-bg);
   --tabRadius: 16px;
 }
-.page-top-box .h1-title {
+.page-top-box .h1-title,
+.page-top-box h1,
+.page-top-box h2 {
   margin-top: 0;
 }
 .page-top-box .title-info {
@@ -4362,6 +4401,9 @@ body.popup-open {
   z-index: 2;
 }
 @media (max-width: 991px) {
+  .filter-box:not(.filter-ext) .row-tags {
+    display: none;
+  }
   .form-inner-box .frm-select label {
     font-size: 10px;
     line-height: 14px;
@@ -4459,7 +4501,9 @@ body.popup-open {
   .info-form-box .title-inner-wrap {
     margin-top: -25px;
   }
-  .info-form-box .title-inner-wrap .h1-title {
+  .info-form-box .title-inner-wrap .h1-title,
+  .info-form-box .title-inner-wrap h1,
+  .info-form-box .title-inner-wrap h2 {
     max-width: 470px;
   }
   .form-inner-box {
@@ -4514,7 +4558,9 @@ body.popup-open {
     max-width: inherit;
     width: 120%;
   }
-  .form-inner-box .title-inner-wrap .h1-title {
+  .form-inner-box .title-inner-wrap .h1-title,
+  .form-inner-box .title-inner-wrap h1,
+  .form-inner-box .title-inner-wrap h2 {
     font-size: 3.2rem;
     left: 1.5rem;
   }
@@ -4737,10 +4783,14 @@ body.popup-open {
     margin: 0;
     padding: 3.5rem 5.4rem 2.7rem 4.8rem;
   }
-  .info-form-box .desc-section-wrap:first-child .h2-title {
+  .info-form-box .desc-section-wrap:first-child .h2-title,
+  .info-form-box .desc-section-wrap:first-child h1,
+  .info-form-box .desc-section-wrap:first-child h2 {
     max-width: 400px;
   }
-  .info-form-box .desc-inner-wrap .h2-title {
+  .info-form-box .desc-inner-wrap .h2-title,
+  .info-form-box .desc-inner-wrap h1,
+  .info-form-box .desc-inner-wrap h2 {
     font-size: 2.4rem;
   }
   .info-form-box .cnt-section-box {
@@ -4813,7 +4863,9 @@ body.popup-open {
   .card-box .price-info {
     padding-right: 3.2rem;
   }
-  .card-box .h2-title {
+  .card-box .h2-title,
+  .card-box h1,
+  .card-box h2 {
     font-size: 20px;
   }
   .card-box .elm-price {
@@ -4844,6 +4896,10 @@ body.popup-open {
     padding-top: 10px;
     padding-bottom: 0;
     margin-bottom: 10px;
+  }
+  .filter-box:not(.filter-ext) .row-tags {
+    height: 34px;
+    overflow: hidden;
   }
   .filter-box .bg-inner-wrap {
     bottom: 20px;
@@ -4900,7 +4956,9 @@ body.popup-open {
     height: auto;
     padding: 10px 0 0 0;
   }
-  .filter-box .title-page-wrap .h1-title {
+  .filter-box .title-page-wrap .h1-title,
+  .filter-box .title-page-wrap h1,
+  .filter-box .title-page-wrap h2 {
     font-size: 3.2rem;
     -ms-flex: 1;
         flex: 1;
@@ -4923,7 +4981,9 @@ body.popup-open {
     padding-top: 9rem;
     min-height: 470px;
   }
-  .error-top-box .h1-title {
+  .error-top-box .h1-title,
+  .error-top-box h1,
+  .error-top-box h2 {
     font-size: 4rem;
   }
   .error-top-box .error-number {

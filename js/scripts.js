@@ -1,3 +1,12 @@
+//filter toggle
+const filterToggleButton = document.querySelector('.js-filter-toggle')
+if (filterToggleButton) {
+	filterToggleButton.addEventListener('click', function() {
+		this.closest('.filter-box').classList.toggle('filter-ext')
+	})
+}
+
+
 //button scroll 
 document.querySelectorAll('.js-anchor').forEach(anchor => {
 	anchor.addEventListener('click', function (e) {
