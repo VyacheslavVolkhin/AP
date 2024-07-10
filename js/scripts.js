@@ -245,6 +245,36 @@ popupElements.forEach((element) => {
   }
 });
 
+
+//checkbox all
+const checkboxes = Array.from(
+  document.querySelectorAll('.chk')
+);
+if (checkboxes.length>0) {
+	function selectAll() {
+    for (let i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].checked = this.checked;
+    }
+  }
+  document.querySelector("#select-all").addEventListener("click", selectAll);
+  function checkAllSelected() {
+    if (
+      checkboxes.every(function (el) {
+        return el.checked;
+      })
+    ) {
+      document.getElementById("select-all").checked = true;
+      console.log("true");
+    } else {
+      document.getElementById("select-all").checked = false;
+    }
+  }
+  checkboxes.forEach(function (el) {
+    el.addEventListener("change", checkAllSelected);
+  });
+}
+
+
 // Popups
 let popupCurrent;
 
@@ -256,8 +286,12 @@ document.querySelectorAll(".js-popup-open").forEach(function (element) {
 
     popupCurrent = this.getAttribute("data-popup");
     popupCurrentValue = this.getAttribute("data-popup-value");
+    popupCurrentTitle = this.getAttribute("data-popup-title");
 	if (popupCurrentValue) {
 		document.getElementById("select-service").selectedIndex = popupCurrentValue;
+	}
+	if (popupCurrentTitle) {
+		document.getElementById("popup-title").textContent = popupCurrentTitle;
 	}
     document
       .querySelector(
@@ -480,22 +514,6 @@ sliderList.forEach(function (slider) {
 })
 
 
-//slider media thumbs main
-const swiperMediaMain = new Swiper(".slider-media-main .swiper", {
-  loop: false,
-  slidesPerView: 1,
-  spaceBetween: 0,
-  autoHeight: true,
-  speed: 400,
-  navigation: false,
-  pagination: {
-    el: ".slider-media-main-pagination",
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
-  },
-});
 //slider media thumbs preview
 const swiperMediaPreview = new Swiper(".slider-media-thumbs .swiper", {
 	loop: false,
@@ -508,9 +526,6 @@ const swiperMediaPreview = new Swiper(".slider-media-thumbs .swiper", {
 		nextEl: ".button-slider-media-thumbs-next",
 		prevEl: ".button-slider-media-thumbs-prev",
 	},
-	thumbs: {
-		swiper: swiperMediaMain,
-	},
 	breakpoints: {
 		640: {
 			slidesPerView: 3,
@@ -522,6 +537,25 @@ const swiperMediaPreview = new Swiper(".slider-media-thumbs .swiper", {
 			slidesPerView: 5,
 		},
 	},
+});
+//slider media thumbs main
+const swiperMediaMain = new Swiper(".slider-media-main .swiper", {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  autoHeight: true,
+  speed: 400,
+  navigation: false,
+  thumbs: {
+    swiper: swiperMediaPreview,
+  },
+  pagination: {
+    el: ".slider-media-main-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  },
 });
 
 //tooltip

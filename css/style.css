@@ -3451,6 +3451,9 @@ body .tippy-box .tippy-arrow {
   opacity: 1;
   pointer-events: auto;
 }
+.photos-slider-box .swiper-slide-thumb-active .elm-photo:after {
+  opacity: 1;
+}
 .photos-slider-box .slider-inner-wrap {
   padding: 0;
 }
@@ -3494,9 +3497,6 @@ body .tippy-box .tippy-arrow {
 .photos-slider-box .slider-media-thumbs .button-slider-media-thumbs-next {
   right: 30px;
   right: 3rem;
-}
-.photos-slider-box .slider-media-thumbs .swiper-slide-active .elm-photo:after {
-  opacity: 1;
 }
 .photos-slider-box .slider-media-main {
   border-radius: var(--radiusLarge);

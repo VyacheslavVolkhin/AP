@@ -413,6 +413,13 @@
 		opacity: 1;
 		pointer-events: auto;
 	}
+	.swiper-slide-thumb-active {
+		.elm-photo {
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
 	.slider-inner-wrap {
 		padding: 0;
 		.slider-wrap {
@@ -454,7 +461,6 @@
 		.swiper-slide-active {
 			.elm-photo {
 				&:after {
-					opacity: 1;
 				}
 			}
 		}
