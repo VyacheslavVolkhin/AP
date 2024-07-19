@@ -201,6 +201,11 @@
 		line-height: normal;
 		margin: 0 0 10px 0;
 	}
+	a {
+		&.active {
+			color: #1E4F4F;
+		}
+	}
 }
 .item-tile-info-toggle {
 	display: block;
@@ -615,6 +620,9 @@
 				color: inherit;
 			}
 		}
+	}
+	.text-left {
+		text-align: left;
 	}
 }
 .item-tile-article {
@@ -1293,6 +1301,9 @@ body {
 			&:has(.btn) {
 				text-align: center;
 				padding-bottom: 3rem;
+				&.text-left {
+					text-align: left;
+				}
 			}
 		}
 		.tile-title {

@@ -246,6 +246,35 @@ popupElements.forEach((element) => {
 });
 
 
+//form input clear
+const inputFields = document.querySelectorAll(".frm-field-input-action .form-input");
+const clearButtons = document.querySelectorAll(".button-field-clear");
+
+for (let i = 0; i < inputFields.length; i++) {
+  const inputField = inputFields[i
+	];
+  const form = inputField.closest(".frm-field-input-action");
+
+  inputField.addEventListener("input", function () {
+	if (inputField.value.length > 0) {
+	  form.classList.add("inp-valid");
+		} else {
+	  form.classList.remove("inp-valid");
+		}
+	});
+}
+for (let i = 0; i < clearButtons.length; i++) {
+  const clearButton = clearButtons[i
+	];
+  clearButton.addEventListener("click", function (event) {
+	this.closest(".frm-field-input-action").querySelector(".form-input").value = "";
+	this.closest(".frm-field-input-action").classList.remove("inp-valid");
+	event.preventDefault();
+	});
+}
+
+
+
 //checkbox all
 const checkboxes = Array.from(
   document.querySelectorAll('.chk')

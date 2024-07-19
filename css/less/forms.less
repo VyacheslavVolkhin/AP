@@ -1,6 +1,30 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.frm-field-input-action {
+	display: block;
+	position: relative;
+	.button-field-clear {
+		position: absolute;
+		top: 50%;right: 10px;
+		width: 30px;height: 30px;
+		margin-top: -15px;
+		opacity: 0;
+		pointer-events: none;
+		transition: all ease 0.2s;
+		z-index: 3;
+		cursor: pointer;
+	}
+	&.inp-valid {
+		.button-field-clear {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+	.form-input {
+		padding-right: 50px;
+	}
+}
 .frm-field-range {
 	display: flex;
 	.field-range {
